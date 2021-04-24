@@ -71,6 +71,12 @@ flutter:
    - Assets/images/tamilnadu.jpg
    - Assets/images/MP.jpg
    - Assets/images/chandigarh.jpg
+   - Assets/images/UP.jpg
+   - Assets/images/westbengal.jpg
+   - Assets/images/rajasthan.jpg
+   - Assets/images/dehradun.jpg
+   - Assets/images/TL.jpg
+   - Assets/images/maharashtra.jpg
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
