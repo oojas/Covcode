@@ -58,6 +58,62 @@ class _mainContentState extends State<mainContent>
     }
   }
 
+  _launchURLPD1() async {
+    const url = 'https://dhoondh.com/';
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
+
+  _launchURLPD2() async {
+    const url = 'https://needplasma.org/';
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
+
+  _launchURLPD3() async {
+    const url = 'https://plasmadonor.in/';
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
+
+  _launchURLPD4() async {
+    const url = 'https://plasmaline.in/';
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
+
+  _launchURLWillingplasmadonor() async {
+    const url =
+        'https://docs.google.com/spreadsheets/d/1dd2r6Kqd2kf-u6KsPgyM2EXI3bmHa_QjxUw6cSOplMo/edit#gid=190289932';
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
+
+  _launchURLMedicine() async {
+    const url =
+        'https://docs.google.com/spreadsheets/u/0/d/1J-m84rr-tV47wZrUKn41jlTTID5FNcMs5MwyYHt9fLU/htmlview';
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
+
   _launchURL() async {
     const url =
         'https://docs.google.com/spreadsheets/d/1YQwtL431q8eG2EBP7qvF-1eX2IhVM8hfED3jc1eQC0o/htmlview';
@@ -1467,7 +1523,202 @@ class _mainContentState extends State<mainContent>
                           ),
                         ),
                       ],
-                    )
+                    ),
+                    SizedBox(
+                      height: 80,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(right: 225.0),
+                              child: Text('National',
+                                  style: GoogleFonts.roboto(
+                                      color: Colors.black,
+                                      fontSize: 60,
+                                      fontWeight: FontWeight.bold)),
+                            ),
+                            Text("Remdesivir",
+                                style: GoogleFonts.roboto(
+                                    color: Colors.black,
+                                    fontSize: 90,
+                                    fontWeight: FontWeight.bold)),
+                            Padding(
+                              padding: const EdgeInsets.only(right: 90.0),
+                              child: Text('Distribution',
+                                  style: GoogleFonts.roboto(
+                                      color: Colors.black,
+                                      fontSize: 70,
+                                      fontWeight: FontWeight.bold)),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(right: 340.0),
+                              child: Text('List',
+                                  style: GoogleFonts.roboto(
+                                      fontSize: 70,
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.bold)),
+                            ),
+                          ],
+                        ),
+                        Container(
+                          height: 400,
+                          child: VerticalDivider(
+                            color: Colors.black,
+                            thickness: 2,
+                          ),
+                        ),
+                        InkWell(
+                          onTap: () {
+                            _launchURLMedicine();
+                          },
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Card(
+                              elevation: 15,
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(15)),
+                              child: Stack(
+                                children: [
+                                  Container(
+                                    decoration: BoxDecoration(
+                                        color: Colors.white,
+                                        borderRadius:
+                                            BorderRadius.circular(15)),
+                                    width: 300,
+                                    height: 400,
+                                  ),
+                                  Positioned(
+                                    left: 1,
+                                    top: 30,
+                                    child: Image.asset(
+                                      'Assets/images/medicine.jpg',
+                                      width: 300,
+                                      height: 200,
+                                    ),
+                                  ),
+                                  Positioned(
+                                      bottom: 40,
+                                      left: 15,
+                                      child: Text("Remdesivir List",
+                                          style: GoogleFonts.roboto(
+                                              color: Colors.black,
+                                              fontSize: 20,
+                                              fontWeight: FontWeight.bold))),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 80,
+                    ),
+                    Text("Plasma Requests\nand Donation",
+                        style: GoogleFonts.roboto(
+                            fontSize: 70,
+                            color: Colors.black,
+                            fontWeight: FontWeight.bold)),
+                    SizedBox(
+                      height: 50,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        MaterialButton(
+                          onPressed: () {
+                            _launchURLPD1();
+                          },
+                          color: Colors.pink,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(50),
+                          ),
+                          height: 80,
+                          minWidth: 300,
+                          child: Text('Dhoondh',
+                              style: GoogleFonts.roboto(
+                                  fontSize: 30,
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.bold)),
+                        ),
+                        MaterialButton(
+                          onPressed: () {
+                            _launchURLPD2();
+                          },
+                          color: Colors.blue.shade400,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(50),
+                          ),
+                          height: 80,
+                          minWidth: 300,
+                          child: Text('NeedPlasma',
+                              style: GoogleFonts.roboto(
+                                  fontSize: 30,
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.bold)),
+                        ),
+                        MaterialButton(
+                          onPressed: () {
+                            _launchURLPD3();
+                          },
+                          color: Colors.green,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(50),
+                          ),
+                          height: 80,
+                          minWidth: 300,
+                          child: Text('Plasmador',
+                              style: GoogleFonts.roboto(
+                                  fontSize: 30,
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.bold)),
+                        )
+                      ],
+                    ),
+                    SizedBox(
+                      height: 50,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        MaterialButton(
+                          onPressed: () {
+                            _launchURLWillingplasmadonor();
+                          },
+                          color: Colors.indigo,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(50),
+                          ),
+                          height: 80,
+                          minWidth: 320,
+                          child: Text('Wiiling Plasma Donor',
+                              style: GoogleFonts.roboto(
+                                  fontSize: 30,
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.bold)),
+                        ),
+                        MaterialButton(
+                          onPressed: () {
+                            _launchURLPD4();
+                          },
+                          color: Colors.deepOrange,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(50),
+                          ),
+                          height: 80,
+                          minWidth: 300,
+                          child: Text('Plasma Line',
+                              style: GoogleFonts.roboto(
+                                  fontSize: 30,
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.bold)),
+                        ),
+                      ],
+                    ),
                   ],
                 ),
               ),
