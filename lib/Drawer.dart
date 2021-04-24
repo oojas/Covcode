@@ -35,6 +35,15 @@ class drawer extends StatelessWidget {
     }
   }
 
+  _launchURLTracker() async {
+    const url = 'https://www.covid19india.org/';
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
+
   _launchURLWT() async {
     const url =
         'https://docs.google.com/spreadsheets/d/1dyDTjj4DpTmVp4rB9KeIsa1x4lEp9Lvg1wmpAQnPgnY/edit?usp=sharing';
@@ -129,6 +138,21 @@ class drawer extends StatelessWidget {
             ListTile(
               horizontalTitleGap: 20,
               leading: Icon(
+                Icons.track_changes,
+                color: Colors.black,
+              ),
+              title: Text('COVID Tracker',
+                  style: GoogleFonts.roboto(color: Colors.black, fontSize: 20)),
+              onTap: () {
+                _launchURLTracker();
+              },
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            ListTile(
+              horizontalTitleGap: 20,
+              leading: Icon(
                 Icons.priority_high_outlined,
                 color: Colors.black,
               ),
@@ -204,7 +228,7 @@ class drawer extends StatelessWidget {
             ListTile(
               horizontalTitleGap: 20,
               leading: Icon(
-                Icons.call,
+                Icons.book,
                 color: Colors.black,
               ),
               title: Text('COVID Guidelines',
