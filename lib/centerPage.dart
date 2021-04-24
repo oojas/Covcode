@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:footer/footer.dart';
+import 'package:footer/footer_view.dart';
 
 // ignore: camel_case_types
 class mainScreen extends StatelessWidget {
@@ -60,6 +62,15 @@ class _mainContentState extends State<mainContent>
 
   _launchURLPD1() async {
     const url = 'https://dhoondh.com/';
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
+
+  _launchURLBeds() async {
+    const url = 'https://u07.ihx.in/';
     if (await canLaunch(url)) {
       await launch(url);
     } else {
@@ -351,7 +362,9 @@ class _mainContentState extends State<mainContent>
                     color: Colors.yellow,
                     borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(80),
-                        topRight: Radius.circular(80))),
+                        topRight: Radius.circular(80),
+                        bottomLeft: Radius.circular(150),
+                        bottomRight: Radius.circular(150))),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -1695,7 +1708,7 @@ class _mainContentState extends State<mainContent>
                           ),
                           height: 80,
                           minWidth: 320,
-                          child: Text('Wiiling Plasma Donor',
+                          child: Text('Willing Plasma Donors',
                               style: GoogleFonts.roboto(
                                   fontSize: 30,
                                   color: Colors.black,
@@ -1719,6 +1732,101 @@ class _mainContentState extends State<mainContent>
                         ),
                       ],
                     ),
+                    SizedBox(
+                      height: 80,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(right: 225.0),
+                              child: Text('Live',
+                                  style: GoogleFonts.roboto(
+                                      color: Colors.black,
+                                      fontSize: 60,
+                                      fontWeight: FontWeight.bold)),
+                            ),
+                            Text("Beds Availability",
+                                style: GoogleFonts.roboto(
+                                    color: Colors.black,
+                                    fontSize: 90,
+                                    fontWeight: FontWeight.bold)),
+                            Padding(
+                              padding: const EdgeInsets.only(right: 90.0),
+                              child: Text('Tracking',
+                                  style: GoogleFonts.roboto(
+                                      color: Colors.black,
+                                      fontSize: 70,
+                                      fontWeight: FontWeight.bold)),
+                            ),
+                          ],
+                        ),
+                        Container(
+                          height: 400,
+                          child: VerticalDivider(
+                            color: Colors.black,
+                            thickness: 2,
+                          ),
+                        ),
+                        InkWell(
+                          onTap: () {
+                            _launchURLBeds();
+                          },
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Card(
+                              elevation: 15,
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(15)),
+                              child: Stack(
+                                children: [
+                                  Container(
+                                    decoration: BoxDecoration(
+                                        color: Colors.white,
+                                        borderRadius:
+                                            BorderRadius.circular(15)),
+                                    width: 400,
+                                    height: 400,
+                                  ),
+                                  Positioned(
+                                    //right: 20,
+                                    top: 30,
+                                    child: Image.asset(
+                                      'Assets/images/beds.jpg',
+                                      width: 400,
+                                      height: 300,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    Footer(
+                        backgroundColor: Colors.yellow.shade400,
+                        child: Column(
+                          children: [
+                            Text(
+                              'Copyright ©2021, All Rights Reserved.',
+                              style: GoogleFonts.roboto(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 12.0,
+                                  color: Color(0xFF162A49)),
+                            ),
+                            Text(
+                              'Made with love by Ojas Gupta',
+                              style: GoogleFonts.roboto(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 12.0,
+                                  color: Color(0xFF162A49)),
+                            ),
+                          ],
+                        ))
                   ],
                 ),
               ),

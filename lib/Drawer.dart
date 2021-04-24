@@ -83,15 +83,6 @@ class drawer extends StatelessWidget {
     }
   }
 
-  _launchURL1() async {
-    const url = 'https://u07.ihx.in/';
-    if (await canLaunch(url)) {
-      await launch(url);
-    } else {
-      throw 'Could not launch $url';
-    }
-  }
-
   _launchURLEmergency() async {
     const url = 'https://life.coronasafe.network/';
     if (await canLaunch(url)) {
@@ -116,21 +107,6 @@ class drawer extends StatelessWidget {
                   width: MediaQuery.of(context).size.width,
                 ),
               ),
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            ListTile(
-              horizontalTitleGap: 20,
-              leading: Icon(
-                Icons.king_bed_outlined,
-                color: Colors.black,
-              ),
-              title: Text('Live Beds Availability Tracking',
-                  style: GoogleFonts.roboto(color: Colors.black, fontSize: 20)),
-              onTap: () {
-                _launchURL1();
-              },
             ),
             SizedBox(
               height: 20,
