@@ -59,8 +59,58 @@ class _mainContentState extends State<mainContent>
     }
   }
 
+  _launchURLGujarat() async {
+    const url =
+        'https://docs.google.com/spreadsheets/d/12VqdKMk0eSUo8oRA4RcwnE1G4QFd-CRsSH5GGXwAaEU/edit#gid=530480134';
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
+
+  _launchURLCH() async {
+    const url =
+        'https://docs.google.com/spreadsheets/d/12VqdKMk0eSUo8oRA4RcwnE1G4QFd-CRsSH5GGXwAaEU/edit#gid=1576527948';
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
+
+  _launchURLKarnataka() async {
+    const url =
+        'https://docs.google.com/spreadsheets/d/12VqdKMk0eSUo8oRA4RcwnE1G4QFd-CRsSH5GGXwAaEU/edit#gid=1188672555';
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
+
   _launchURLDelhi() async {
     const url = 'https://linktr.ee/_Help20';
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
+
+  _launchURLAndhra() async {
+    const url =
+        'https://docs.google.com/spreadsheets/d/12VqdKMk0eSUo8oRA4RcwnE1G4QFd-CRsSH5GGXwAaEU/edit#gid=1639847916';
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
+
+  _launchURLLucknow() async {
+    const url =
+        'https://docs.google.com/spreadsheets/d/1roxOi2_Uw4YBzLd5s8vC8cp6lbuM9016tWeWTcx2q5Y/edit#gid=0';
     if (await canLaunch(url)) {
       await launch(url);
     } else {
@@ -115,6 +165,9 @@ class _mainContentState extends State<mainContent>
                   children: [
                     Row(
                       children: [
+                        SizedBox(
+                          width: 30,
+                        ),
                         InkWell(
                           onTap: () {
                             _launchURL();
@@ -156,6 +209,9 @@ class _mainContentState extends State<mainContent>
                               ),
                             ),
                           ),
+                        ),
+                        SizedBox(
+                          width: 20,
                         ),
                         InkWell(
                           onTap: () {
@@ -199,6 +255,9 @@ class _mainContentState extends State<mainContent>
                             ),
                           ),
                         ),
+                        SizedBox(
+                          width: 20,
+                        ),
                         InkWell(
                           onTap: () {
                             _launchURLMumbai();
@@ -240,6 +299,9 @@ class _mainContentState extends State<mainContent>
                               ),
                             ),
                           ),
+                        ),
+                        SizedBox(
+                          width: 20,
                         ),
                         InkWell(
                           onTap: () {
@@ -283,6 +345,9 @@ class _mainContentState extends State<mainContent>
                             ),
                           ),
                         ),
+                        SizedBox(
+                          width: 20,
+                        ),
                         InkWell(
                           onTap: () {
                             _launchURLKolkata();
@@ -316,6 +381,235 @@ class _mainContentState extends State<mainContent>
                                       bottom: 40,
                                       left: 25,
                                       child: Text("Kolkata",
+                                          style: GoogleFonts.roboto(
+                                              color: Colors.black,
+                                              fontSize: 20,
+                                              fontWeight: FontWeight.bold))),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          width: 20,
+                        ),
+                        InkWell(
+                          onTap: () {
+                            _launchURLKarnataka();
+                          },
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Card(
+                              elevation: 15,
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(15)),
+                              child: Stack(
+                                children: [
+                                  Container(
+                                    decoration: BoxDecoration(
+                                        color: Colors.white,
+                                        borderRadius:
+                                            BorderRadius.circular(15)),
+                                    width: 200,
+                                    height: 300,
+                                  ),
+                                  Positioned(
+                                    left: 1,
+                                    top: 30,
+                                    child: Image.asset(
+                                      'Assets/images/karnataka.jpg',
+                                      width: 200,
+                                      height: 200,
+                                    ),
+                                  ),
+                                  Positioned(
+                                      bottom: 40,
+                                      left: 25,
+                                      child: Text("Karnataka",
+                                          style: GoogleFonts.roboto(
+                                              color: Colors.black,
+                                              fontSize: 20,
+                                              fontWeight: FontWeight.bold))),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        SizedBox(
+                          width: 30,
+                        ),
+                        InkWell(
+                          onTap: () {
+                            _launchURLAndhra();
+                          },
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Card(
+                              elevation: 15,
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(15)),
+                              child: Stack(
+                                children: [
+                                  Container(
+                                    decoration: BoxDecoration(
+                                        color: Colors.white,
+                                        borderRadius:
+                                            BorderRadius.circular(15)),
+                                    width: 200,
+                                    height: 300,
+                                  ),
+                                  Positioned(
+                                    left: 1,
+                                    top: 30,
+                                    child: Image.asset(
+                                      'Assets/images/andhra.jpg',
+                                      width: 200,
+                                      height: 200,
+                                    ),
+                                  ),
+                                  Positioned(
+                                      bottom: 40,
+                                      left: 15,
+                                      child: Text("Andhra Pradesh",
+                                          style: GoogleFonts.roboto(
+                                              color: Colors.black,
+                                              fontSize: 20,
+                                              fontWeight: FontWeight.bold))),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          width: 20,
+                        ),
+                        InkWell(
+                          onTap: () {
+                            _launchURLLucknow();
+                          },
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Card(
+                              elevation: 15,
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(15)),
+                              child: Stack(
+                                children: [
+                                  Container(
+                                    decoration: BoxDecoration(
+                                        color: Colors.white,
+                                        borderRadius:
+                                            BorderRadius.circular(15)),
+                                    width: 200,
+                                    height: 300,
+                                  ),
+                                  Positioned(
+                                    left: 1,
+                                    top: 30,
+                                    child: Image.asset(
+                                      'Assets/images/lucknow.jpg',
+                                      width: 200,
+                                      height: 200,
+                                    ),
+                                  ),
+                                  Positioned(
+                                      bottom: 40,
+                                      left: 15,
+                                      child: Text("Lucknow",
+                                          style: GoogleFonts.roboto(
+                                              color: Colors.black,
+                                              fontSize: 20,
+                                              fontWeight: FontWeight.bold))),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          width: 20,
+                        ),
+                        InkWell(
+                          onTap: () {
+                            _launchURLCH();
+                          },
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Card(
+                              elevation: 15,
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(15)),
+                              child: Stack(
+                                children: [
+                                  Container(
+                                    decoration: BoxDecoration(
+                                        color: Colors.white,
+                                        borderRadius:
+                                            BorderRadius.circular(15)),
+                                    width: 200,
+                                    height: 300,
+                                  ),
+                                  Positioned(
+                                    left: 1,
+                                    top: 30,
+                                    child: Image.asset(
+                                      'Assets/images/ch.jpg',
+                                      width: 200,
+                                      height: 200,
+                                    ),
+                                  ),
+                                  Positioned(
+                                      bottom: 40,
+                                      left: 15,
+                                      child: Text("Chhattisgarh",
+                                          style: GoogleFonts.roboto(
+                                              color: Colors.black,
+                                              fontSize: 20,
+                                              fontWeight: FontWeight.bold))),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          width: 20,
+                        ),
+                        InkWell(
+                          onTap: () {
+                            _launchURLGujarat();
+                          },
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Card(
+                              elevation: 15,
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(15)),
+                              child: Stack(
+                                children: [
+                                  Container(
+                                    decoration: BoxDecoration(
+                                        color: Colors.white,
+                                        borderRadius:
+                                            BorderRadius.circular(15)),
+                                    width: 200,
+                                    height: 300,
+                                  ),
+                                  Positioned(
+                                    left: 1,
+                                    top: 30,
+                                    child: Image.asset(
+                                      'Assets/images/ch.jpg',
+                                      width: 200,
+                                      height: 200,
+                                    ),
+                                  ),
+                                  Positioned(
+                                      bottom: 40,
+                                      left: 15,
+                                      child: Text("Gujarat",
                                           style: GoogleFonts.roboto(
                                               color: Colors.black,
                                               fontSize: 20,
