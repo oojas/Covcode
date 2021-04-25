@@ -97,20 +97,6 @@ class drawer extends StatelessWidget {
       child: SingleChildScrollView(
         child: Column(
           children: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Container(
-                decoration: BoxDecoration(color: Colors.grey),
-                width: MediaQuery.of(context).size.width,
-                child: Image.asset(
-                  'Assets/images/together.jpg',
-                  width: MediaQuery.of(context).size.width,
-                ),
-              ),
-            ),
-            SizedBox(
-              height: 20,
-            ),
             ListTile(
               horizontalTitleGap: 20,
               leading: Icon(
