@@ -1,5 +1,4 @@
 import 'package:covidresources/Drawer.dart';
-import 'package:covidresources/MobileviewmainPage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -8,31 +7,13 @@ import 'package:url_launcher/url_launcher.dart';
 import 'package:footer/footer.dart';
 
 // ignore: camel_case_types
-class mainScreen extends StatelessWidget {
+class mobileContent extends StatefulWidget {
   @override
-  Widget build(BuildContext context) {
-    return LayoutBuilder(
-      builder: (context, constraints) {
-        if (constraints.maxWidth > 1200) {
-          return mainContent();
-        } else if (constraints.maxWidth > 800 && constraints.maxWidth < 1200) {
-          return mainContent();
-        } else {
-          return mobileContent();
-        }
-      },
-    );
-  }
+  _mobileContentState createState() => _mobileContentState();
 }
 
 // ignore: camel_case_types
-class mainContent extends StatefulWidget {
-  @override
-  _mainContentState createState() => _mainContentState();
-}
-
-// ignore: camel_case_types
-class _mainContentState extends State<mainContent>
+class _mobileContentState extends State<mobileContent>
     with SingleTickerProviderStateMixin {
   AnimationController _controller;
   Animation<double> _animation;
@@ -370,106 +351,109 @@ class _mainContentState extends State<mainContent>
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
+                    Row(children: [
+                      SizedBox(
+                        width: 30,
+                      ),
+                      FadeTransition(
+                        opacity: _animation,
+                        child: InkWell(
+                          onTap: () {
+                            _launchURL();
+                          },
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Card(
+                              elevation: 15,
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(15)),
+                              child: Stack(
+                                children: [
+                                  Container(
+                                    decoration: BoxDecoration(
+                                        color: Colors.white,
+                                        borderRadius:
+                                            BorderRadius.circular(15)),
+                                    width: 150,
+                                    height: 250,
+                                  ),
+                                  Positioned(
+                                    left: 1,
+                                    top: 30,
+                                    child: Image.asset(
+                                      'Assets/images/JK.jpg',
+                                      width: 200,
+                                      height: 200,
+                                    ),
+                                  ),
+                                  Positioned(
+                                      bottom: 20,
+                                      left: 15,
+                                      child: Text("Jammu &\nKashmir",
+                                          style: GoogleFonts.roboto(
+                                              color: Colors.black,
+                                              fontSize: 20,
+                                              fontWeight: FontWeight.bold))),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      FadeTransition(
+                        opacity: _animation,
+                        child: InkWell(
+                          onTap: () {
+                            _launchURLDelhi();
+                          },
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Card(
+                              elevation: 15,
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(15)),
+                              child: Stack(
+                                children: [
+                                  Container(
+                                    decoration: BoxDecoration(
+                                        color: Colors.white,
+                                        borderRadius:
+                                            BorderRadius.circular(15)),
+                                    width: 150,
+                                    height: 250,
+                                  ),
+                                  Positioned(
+                                    left: 1,
+                                    top: 30,
+                                    child: Image.asset(
+                                      'Assets/images/delhi.jpg',
+                                      width: 200,
+                                      height: 200,
+                                    ),
+                                  ),
+                                  Positioned(
+                                      bottom: 40,
+                                      left: 25,
+                                      child: Text("Delhi",
+                                          style: GoogleFonts.roboto(
+                                              color: Colors.black,
+                                              fontSize: 20,
+                                              fontWeight: FontWeight.bold))),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ]),
                     Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         SizedBox(
-                          width: 30,
-                        ),
-                        FadeTransition(
-                          opacity: _animation,
-                          child: InkWell(
-                            onTap: () {
-                              _launchURL();
-                            },
-                            child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Card(
-                                elevation: 15,
-                                shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(15)),
-                                child: Stack(
-                                  children: [
-                                    Container(
-                                      decoration: BoxDecoration(
-                                          color: Colors.white,
-                                          borderRadius:
-                                              BorderRadius.circular(15)),
-                                      width: 200,
-                                      height: 300,
-                                    ),
-                                    Positioned(
-                                      left: 1,
-                                      top: 30,
-                                      child: Image.asset(
-                                        'Assets/images/JK.jpg',
-                                        width: 200,
-                                        height: 200,
-                                      ),
-                                    ),
-                                    Positioned(
-                                        bottom: 40,
-                                        left: 15,
-                                        child: Text("Jammu & Kashmir",
-                                            style: GoogleFonts.roboto(
-                                                color: Colors.black,
-                                                fontSize: 20,
-                                                fontWeight: FontWeight.bold))),
-                                  ],
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                        SizedBox(
-                          width: 20,
-                        ),
-                        FadeTransition(
-                          opacity: _animation,
-                          child: InkWell(
-                            onTap: () {
-                              _launchURLDelhi();
-                            },
-                            child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Card(
-                                elevation: 15,
-                                shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(15)),
-                                child: Stack(
-                                  children: [
-                                    Container(
-                                      decoration: BoxDecoration(
-                                          color: Colors.white,
-                                          borderRadius:
-                                              BorderRadius.circular(15)),
-                                      width: 200,
-                                      height: 300,
-                                    ),
-                                    Positioned(
-                                      left: 1,
-                                      top: 30,
-                                      child: Image.asset(
-                                        'Assets/images/delhi.jpg',
-                                        width: 200,
-                                        height: 200,
-                                      ),
-                                    ),
-                                    Positioned(
-                                        bottom: 40,
-                                        left: 25,
-                                        child: Text("Delhi",
-                                            style: GoogleFonts.roboto(
-                                                color: Colors.black,
-                                                fontSize: 20,
-                                                fontWeight: FontWeight.bold))),
-                                  ],
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                        SizedBox(
-                          width: 20,
+                          width: 2,
                         ),
                         FadeTransition(
                           opacity: _animation,
@@ -490,8 +474,8 @@ class _mainContentState extends State<mainContent>
                                           color: Colors.white,
                                           borderRadius:
                                               BorderRadius.circular(15)),
-                                      width: 200,
-                                      height: 300,
+                                      width: 150,
+                                      height: 250,
                                     ),
                                     Positioned(
                                       left: 1,
@@ -516,9 +500,6 @@ class _mainContentState extends State<mainContent>
                             ),
                           ),
                         ),
-                        SizedBox(
-                          width: 20,
-                        ),
                         FadeTransition(
                           opacity: _animation,
                           child: InkWell(
@@ -538,8 +519,8 @@ class _mainContentState extends State<mainContent>
                                           color: Colors.white,
                                           borderRadius:
                                               BorderRadius.circular(15)),
-                                      width: 200,
-                                      height: 300,
+                                      width: 150,
+                                      height: 250,
                                     ),
                                     Positioned(
                                       left: 1,
@@ -564,8 +545,13 @@ class _mainContentState extends State<mainContent>
                             ),
                           ),
                         ),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
                         SizedBox(
-                          width: 20,
+                          width: 2,
                         ),
                         FadeTransition(
                           opacity: _animation,
@@ -586,8 +572,8 @@ class _mainContentState extends State<mainContent>
                                           color: Colors.white,
                                           borderRadius:
                                               BorderRadius.circular(15)),
-                                      width: 200,
-                                      height: 300,
+                                      width: 150,
+                                      height: 250,
                                     ),
                                     Positioned(
                                       left: 1,
@@ -612,9 +598,6 @@ class _mainContentState extends State<mainContent>
                             ),
                           ),
                         ),
-                        SizedBox(
-                          width: 20,
-                        ),
                         FadeTransition(
                           opacity: _animation,
                           child: InkWell(
@@ -634,16 +617,16 @@ class _mainContentState extends State<mainContent>
                                           color: Colors.white,
                                           borderRadius:
                                               BorderRadius.circular(15)),
-                                      width: 200,
-                                      height: 300,
+                                      width: 150,
+                                      height: 250,
                                     ),
                                     Positioned(
                                       left: 1,
                                       top: 30,
                                       child: Image.asset(
                                         'Assets/images/karnataka.jpg',
-                                        width: 200,
-                                        height: 200,
+                                        width: 150,
+                                        height: 150,
                                       ),
                                     ),
                                     Positioned(
@@ -663,9 +646,10 @@ class _mainContentState extends State<mainContent>
                       ],
                     ),
                     Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         SizedBox(
-                          width: 30,
+                          width: 5,
                         ),
                         FadeTransition(
                           opacity: _animation,
@@ -686,22 +670,22 @@ class _mainContentState extends State<mainContent>
                                           color: Colors.white,
                                           borderRadius:
                                               BorderRadius.circular(15)),
-                                      width: 200,
-                                      height: 300,
+                                      width: 150,
+                                      height: 250,
                                     ),
                                     Positioned(
                                       left: 1,
                                       top: 30,
                                       child: Image.asset(
                                         'Assets/images/andhra.jpg',
-                                        width: 200,
-                                        height: 200,
+                                        width: 180,
+                                        height: 120,
                                       ),
                                     ),
                                     Positioned(
                                         bottom: 40,
                                         left: 15,
-                                        child: Text("Andhra Pradesh",
+                                        child: Text("Andhra\nPradesh",
                                             style: GoogleFonts.roboto(
                                                 color: Colors.black,
                                                 fontSize: 20,
@@ -711,9 +695,6 @@ class _mainContentState extends State<mainContent>
                               ),
                             ),
                           ),
-                        ),
-                        SizedBox(
-                          width: 20,
                         ),
                         FadeTransition(
                           opacity: _animation,
@@ -734,8 +715,8 @@ class _mainContentState extends State<mainContent>
                                           color: Colors.white,
                                           borderRadius:
                                               BorderRadius.circular(15)),
-                                      width: 200,
-                                      height: 300,
+                                      width: 150,
+                                      height: 250,
                                     ),
                                     Positioned(
                                       left: 1,
@@ -760,8 +741,13 @@ class _mainContentState extends State<mainContent>
                             ),
                           ),
                         ),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
                         SizedBox(
-                          width: 20,
+                          width: 2,
                         ),
                         FadeTransition(
                           opacity: _animation,
@@ -782,8 +768,8 @@ class _mainContentState extends State<mainContent>
                                           color: Colors.white,
                                           borderRadius:
                                               BorderRadius.circular(15)),
-                                      width: 200,
-                                      height: 300,
+                                      width: 150,
+                                      height: 250,
                                     ),
                                     Positioned(
                                       left: 1,
@@ -808,9 +794,6 @@ class _mainContentState extends State<mainContent>
                             ),
                           ),
                         ),
-                        SizedBox(
-                          width: 20,
-                        ),
                         FadeTransition(
                           opacity: _animation,
                           child: InkWell(
@@ -830,15 +813,15 @@ class _mainContentState extends State<mainContent>
                                           color: Colors.white,
                                           borderRadius:
                                               BorderRadius.circular(15)),
-                                      width: 200,
-                                      height: 300,
+                                      width: 150,
+                                      height: 250,
                                     ),
                                     Positioned(
                                       left: 1,
                                       top: 30,
                                       child: Image.asset(
                                         'Assets/images/gujarat.jpg',
-                                        width: 200,
+                                        width: 150,
                                         height: 200,
                                       ),
                                     ),
@@ -856,8 +839,13 @@ class _mainContentState extends State<mainContent>
                             ),
                           ),
                         ),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
                         SizedBox(
-                          width: 20,
+                          width: 2,
                         ),
                         FadeTransition(
                           opacity: _animation,
@@ -878,15 +866,15 @@ class _mainContentState extends State<mainContent>
                                           color: Colors.white,
                                           borderRadius:
                                               BorderRadius.circular(15)),
-                                      width: 200,
-                                      height: 300,
+                                      width: 150,
+                                      height: 250,
                                     ),
                                     Positioned(
                                       left: 1,
                                       top: 30,
                                       child: Image.asset(
                                         'Assets/images/haryana.jpg',
-                                        width: 200,
+                                        width: 180,
                                         height: 200,
                                       ),
                                     ),
@@ -903,9 +891,6 @@ class _mainContentState extends State<mainContent>
                               ),
                             ),
                           ),
-                        ),
-                        SizedBox(
-                          width: 20,
                         ),
                         FadeTransition(
                           opacity: _animation,
@@ -926,16 +911,16 @@ class _mainContentState extends State<mainContent>
                                           color: Colors.white,
                                           borderRadius:
                                               BorderRadius.circular(15)),
-                                      width: 200,
-                                      height: 300,
+                                      width: 150,
+                                      height: 250,
                                     ),
                                     Positioned(
                                       left: 1,
                                       top: 30,
                                       child: Image.asset(
                                         'Assets/images/jharkhand.jpg',
-                                        width: 200,
-                                        height: 200,
+                                        width: 150,
+                                        height: 170,
                                       ),
                                     ),
                                     Positioned(
@@ -955,8 +940,9 @@ class _mainContentState extends State<mainContent>
                       ],
                     ),
                     Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        SizedBox(width: 30),
+                        SizedBox(width: 2),
                         FadeTransition(
                           opacity: _animation,
                           child: InkWell(
@@ -976,8 +962,8 @@ class _mainContentState extends State<mainContent>
                                           color: Colors.white,
                                           borderRadius:
                                               BorderRadius.circular(15)),
-                                      width: 200,
-                                      height: 300,
+                                      width: 150,
+                                      height: 250,
                                     ),
                                     Positioned(
                                       left: 1,
@@ -1002,9 +988,6 @@ class _mainContentState extends State<mainContent>
                             ),
                           ),
                         ),
-                        SizedBox(
-                          width: 20,
-                        ),
                         FadeTransition(
                           opacity: _animation,
                           child: InkWell(
@@ -1024,16 +1007,16 @@ class _mainContentState extends State<mainContent>
                                           color: Colors.white,
                                           borderRadius:
                                               BorderRadius.circular(15)),
-                                      width: 200,
-                                      height: 300,
+                                      width: 150,
+                                      height: 250,
                                     ),
                                     Positioned(
                                       left: 1,
                                       top: 30,
                                       child: Image.asset(
                                         'Assets/images/odisha.jpg',
-                                        width: 200,
-                                        height: 200,
+                                        width: 170,
+                                        height: 160,
                                       ),
                                     ),
                                     Positioned(
@@ -1050,8 +1033,13 @@ class _mainContentState extends State<mainContent>
                             ),
                           ),
                         ),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
                         SizedBox(
-                          width: 20,
+                          width: 2,
                         ),
                         FadeTransition(
                           opacity: _animation,
@@ -1072,8 +1060,8 @@ class _mainContentState extends State<mainContent>
                                           color: Colors.white,
                                           borderRadius:
                                               BorderRadius.circular(15)),
-                                      width: 200,
-                                      height: 300,
+                                      width: 150,
+                                      height: 250,
                                     ),
                                     Positioned(
                                       left: 1,
@@ -1098,9 +1086,6 @@ class _mainContentState extends State<mainContent>
                             ),
                           ),
                         ),
-                        SizedBox(
-                          width: 20,
-                        ),
                         FadeTransition(
                           opacity: _animation,
                           child: InkWell(
@@ -1120,8 +1105,8 @@ class _mainContentState extends State<mainContent>
                                           color: Colors.white,
                                           borderRadius:
                                               BorderRadius.circular(15)),
-                                      width: 200,
-                                      height: 300,
+                                      width: 150,
+                                      height: 250,
                                     ),
                                     Positioned(
                                       left: 1,
@@ -1146,8 +1131,13 @@ class _mainContentState extends State<mainContent>
                             ),
                           ),
                         ),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
                         SizedBox(
-                          width: 20,
+                          width: 5,
                         ),
                         FadeTransition(
                           opacity: _animation,
@@ -1168,22 +1158,22 @@ class _mainContentState extends State<mainContent>
                                           color: Colors.white,
                                           borderRadius:
                                               BorderRadius.circular(15)),
-                                      width: 200,
-                                      height: 300,
+                                      width: 150,
+                                      height: 250,
                                     ),
                                     Positioned(
                                       left: 1,
                                       top: 30,
                                       child: Image.asset(
                                         'Assets/images/MP.jpg',
-                                        width: 200,
-                                        height: 200,
+                                        width: 150,
+                                        height: 180,
                                       ),
                                     ),
                                     Positioned(
                                         bottom: 40,
                                         left: 15,
-                                        child: Text("Madhya Pradesh",
+                                        child: Text("Madhya\nPradesh",
                                             style: GoogleFonts.roboto(
                                                 color: Colors.black,
                                                 fontSize: 20,
@@ -1193,9 +1183,6 @@ class _mainContentState extends State<mainContent>
                               ),
                             ),
                           ),
-                        ),
-                        SizedBox(
-                          width: 20,
                         ),
                         FadeTransition(
                           opacity: _animation,
@@ -1216,15 +1203,15 @@ class _mainContentState extends State<mainContent>
                                           color: Colors.white,
                                           borderRadius:
                                               BorderRadius.circular(15)),
-                                      width: 200,
-                                      height: 300,
+                                      width: 150,
+                                      height: 250,
                                     ),
                                     Positioned(
                                       left: 1,
                                       top: 30,
                                       child: Image.asset(
                                         'Assets/images/chandigarh.jpg',
-                                        width: 200,
+                                        width: 150,
                                         height: 200,
                                       ),
                                     ),
@@ -1242,15 +1229,13 @@ class _mainContentState extends State<mainContent>
                             ),
                           ),
                         ),
-                        SizedBox(
-                          width: 20,
-                        ),
                       ],
                     ),
                     Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         SizedBox(
-                          width: 30,
+                          width: 2,
                         ),
                         FadeTransition(
                           opacity: _animation,
@@ -1271,16 +1256,16 @@ class _mainContentState extends State<mainContent>
                                           color: Colors.white,
                                           borderRadius:
                                               BorderRadius.circular(15)),
-                                      width: 200,
-                                      height: 300,
+                                      width: 150,
+                                      height: 250,
                                     ),
                                     Positioned(
                                       left: 1,
                                       top: 30,
                                       child: Image.asset(
                                         'Assets/images/TL.jpg',
-                                        width: 200,
-                                        height: 200,
+                                        width: 150,
+                                        height: 150,
                                       ),
                                     ),
                                     Positioned(
@@ -1296,9 +1281,6 @@ class _mainContentState extends State<mainContent>
                               ),
                             ),
                           ),
-                        ),
-                        SizedBox(
-                          width: 20,
                         ),
                         FadeTransition(
                           opacity: _animation,
@@ -1319,15 +1301,15 @@ class _mainContentState extends State<mainContent>
                                           color: Colors.white,
                                           borderRadius:
                                               BorderRadius.circular(15)),
-                                      width: 200,
-                                      height: 300,
+                                      width: 150,
+                                      height: 250,
                                     ),
                                     Positioned(
                                       left: 1,
                                       top: 30,
                                       child: Image.asset(
                                         'Assets/images/UP.jpg',
-                                        width: 200,
+                                        width: 160,
                                         height: 200,
                                       ),
                                     ),
@@ -1345,8 +1327,13 @@ class _mainContentState extends State<mainContent>
                             ),
                           ),
                         ),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
                         SizedBox(
-                          width: 20,
+                          width: 2,
                         ),
                         FadeTransition(
                           opacity: _animation,
@@ -1367,8 +1354,8 @@ class _mainContentState extends State<mainContent>
                                           color: Colors.white,
                                           borderRadius:
                                               BorderRadius.circular(15)),
-                                      width: 200,
-                                      height: 300,
+                                      width: 150,
+                                      height: 250,
                                     ),
                                     Positioned(
                                       left: 1,
@@ -1376,7 +1363,7 @@ class _mainContentState extends State<mainContent>
                                       child: Image.asset(
                                         'Assets/images/westbengal.jpg',
                                         width: 200,
-                                        height: 200,
+                                        height: 180,
                                       ),
                                     ),
                                     Positioned(
@@ -1392,9 +1379,6 @@ class _mainContentState extends State<mainContent>
                               ),
                             ),
                           ),
-                        ),
-                        SizedBox(
-                          width: 20,
                         ),
                         FadeTransition(
                           opacity: _animation,
@@ -1415,8 +1399,8 @@ class _mainContentState extends State<mainContent>
                                           color: Colors.white,
                                           borderRadius:
                                               BorderRadius.circular(15)),
-                                      width: 200,
-                                      height: 300,
+                                      width: 150,
+                                      height: 250,
                                     ),
                                     Positioned(
                                       left: 1,
@@ -1441,8 +1425,13 @@ class _mainContentState extends State<mainContent>
                             ),
                           ),
                         ),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
                         SizedBox(
-                          width: 20,
+                          width: 2,
                         ),
                         FadeTransition(
                           opacity: _animation,
@@ -1463,8 +1452,8 @@ class _mainContentState extends State<mainContent>
                                           color: Colors.white,
                                           borderRadius:
                                               BorderRadius.circular(15)),
-                                      width: 200,
-                                      height: 300,
+                                      width: 150,
+                                      height: 250,
                                     ),
                                     Positioned(
                                       left: 1,
@@ -1489,9 +1478,6 @@ class _mainContentState extends State<mainContent>
                             ),
                           ),
                         ),
-                        SizedBox(
-                          width: 20,
-                        ),
                         FadeTransition(
                           opacity: _animation,
                           child: InkWell(
@@ -1511,16 +1497,16 @@ class _mainContentState extends State<mainContent>
                                           color: Colors.white,
                                           borderRadius:
                                               BorderRadius.circular(15)),
-                                      width: 200,
-                                      height: 300,
+                                      width: 150,
+                                      height: 250,
                                     ),
                                     Positioned(
                                       left: 1,
                                       top: 30,
                                       child: Image.asset(
                                         'Assets/images/maharashtra.jpg',
-                                        width: 200,
-                                        height: 200,
+                                        width: 180,
+                                        height: 150,
                                       ),
                                     ),
                                     Positioned(
@@ -1540,102 +1526,56 @@ class _mainContentState extends State<mainContent>
                       ],
                     ),
                     SizedBox(
-                      height: 80,
+                      height: 30,
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    Column(
                       children: [
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.only(right: 225.0),
-                              child: Text('National',
-                                  style: GoogleFonts.roboto(
-                                      color: Colors.black,
-                                      fontSize: 60,
-                                      fontWeight: FontWeight.bold)),
-                            ),
-                            Text("Remdesivir",
-                                style: GoogleFonts.roboto(
-                                    color: Colors.black,
-                                    fontSize: 90,
-                                    fontWeight: FontWeight.bold)),
-                            Padding(
-                              padding: const EdgeInsets.only(right: 90.0),
-                              child: Text('Distribution',
-                                  style: GoogleFonts.roboto(
-                                      color: Colors.black,
-                                      fontSize: 70,
-                                      fontWeight: FontWeight.bold)),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.only(right: 340.0),
-                              child: Text('List',
-                                  style: GoogleFonts.roboto(
-                                      fontSize: 70,
-                                      color: Colors.black,
-                                      fontWeight: FontWeight.bold)),
-                            ),
-                          ],
+                        Padding(
+                          padding: const EdgeInsets.only(right: 160),
+                          child: Text(
+                              'National\nRemdesivir\nDistribution\nlist',
+                              style: GoogleFonts.roboto(
+                                  color: Colors.black,
+                                  fontSize: 35,
+                                  fontWeight: FontWeight.bold)),
                         ),
-                        Container(
-                          height: 400,
-                          child: VerticalDivider(
-                            color: Colors.black,
-                            thickness: 2,
-                          ),
-                        ),
-                        InkWell(
-                          onTap: () {
-                            _launchURLMedicine();
-                          },
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Card(
-                              elevation: 15,
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(15)),
-                              child: Stack(
-                                children: [
-                                  Container(
-                                    decoration: BoxDecoration(
-                                        color: Colors.white,
-                                        borderRadius:
-                                            BorderRadius.circular(15)),
-                                    width: 300,
-                                    height: 400,
-                                  ),
-                                  Positioned(
-                                    left: 1,
-                                    top: 30,
-                                    child: Image.asset(
-                                      'Assets/images/medicine.jpg',
-                                      width: 300,
-                                      height: 200,
-                                    ),
-                                  ),
-                                  Positioned(
-                                      bottom: 40,
-                                      left: 15,
-                                      child: Text("Remdesivir List",
-                                          style: GoogleFonts.roboto(
-                                              color: Colors.black,
-                                              fontSize: 20,
-                                              fontWeight: FontWeight.bold))),
-                                ],
+                        Card(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(30)),
+                            child: Stack(children: [
+                              Container(
+                                decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(15)),
+                                width: 200,
+                                height: 300,
                               ),
-                            ),
-                          ),
-                        ),
+                              Positioned(
+                                left: 1,
+                                top: 30,
+                                child: Image.asset(
+                                  'Assets/images/medicine.jpg',
+                                  width: 230,
+                                  height: 200,
+                                ),
+                              ),
+                              Positioned(
+                                  bottom: 40,
+                                  left: 30,
+                                  child: Text("Remdesivir List",
+                                      style: GoogleFonts.roboto(
+                                          color: Colors.black,
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold)))
+                            ])),
                       ],
                     ),
                     SizedBox(
-                      height: 80,
+                      height: 50,
                     ),
                     Text("Plasma Requests\nand Donation",
                         style: GoogleFonts.roboto(
-                            fontSize: 70,
+                            fontSize: 40,
                             color: Colors.black,
                             fontWeight: FontWeight.bold)),
                     SizedBox(
@@ -1653,10 +1593,10 @@ class _mainContentState extends State<mainContent>
                             borderRadius: BorderRadius.circular(50),
                           ),
                           height: 80,
-                          minWidth: 300,
+                          minWidth: 120,
                           child: Text('Dhoondh',
                               style: GoogleFonts.roboto(
-                                  fontSize: 30,
+                                  fontSize: 20,
                                   color: Colors.black,
                                   fontWeight: FontWeight.bold)),
                         ),
@@ -1669,13 +1609,21 @@ class _mainContentState extends State<mainContent>
                             borderRadius: BorderRadius.circular(50),
                           ),
                           height: 80,
-                          minWidth: 300,
+                          minWidth: 120,
                           child: Text('NeedPlasma',
                               style: GoogleFonts.roboto(
-                                  fontSize: 30,
+                                  fontSize: 20,
                                   color: Colors.black,
                                   fontWeight: FontWeight.bold)),
                         ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 50,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
                         MaterialButton(
                           onPressed: () {
                             _launchURLPD3();
@@ -1685,13 +1633,29 @@ class _mainContentState extends State<mainContent>
                             borderRadius: BorderRadius.circular(50),
                           ),
                           height: 80,
-                          minWidth: 300,
+                          minWidth: 120,
                           child: Text('Plasmador',
                               style: GoogleFonts.roboto(
-                                  fontSize: 30,
+                                  fontSize: 20,
                                   color: Colors.black,
                                   fontWeight: FontWeight.bold)),
-                        )
+                        ),
+                        MaterialButton(
+                          onPressed: () {
+                            _launchURLPD4();
+                          },
+                          color: Colors.deepOrange,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(50),
+                          ),
+                          height: 80,
+                          minWidth: 120,
+                          child: Text('Plasma Line',
+                              style: GoogleFonts.roboto(
+                                  fontSize: 20,
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.bold)),
+                        ),
                       ],
                     ),
                     SizedBox(
@@ -1712,23 +1676,7 @@ class _mainContentState extends State<mainContent>
                           minWidth: 320,
                           child: Text('Willing Plasma Donors',
                               style: GoogleFonts.roboto(
-                                  fontSize: 30,
-                                  color: Colors.black,
-                                  fontWeight: FontWeight.bold)),
-                        ),
-                        MaterialButton(
-                          onPressed: () {
-                            _launchURLPD4();
-                          },
-                          color: Colors.deepOrange,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(50),
-                          ),
-                          height: 80,
-                          minWidth: 300,
-                          child: Text('Plasma Line',
-                              style: GoogleFonts.roboto(
-                                  fontSize: 30,
+                                  fontSize: 20,
                                   color: Colors.black,
                                   fontWeight: FontWeight.bold)),
                         ),
@@ -1737,8 +1685,7 @@ class _mainContentState extends State<mainContent>
                     SizedBox(
                       height: 80,
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    Column(
                       children: [
                         Column(
                           mainAxisAlignment: MainAxisAlignment.start,
@@ -1748,30 +1695,26 @@ class _mainContentState extends State<mainContent>
                               child: Text('Live',
                                   style: GoogleFonts.roboto(
                                       color: Colors.black,
-                                      fontSize: 60,
+                                      fontSize: 40,
                                       fontWeight: FontWeight.bold)),
                             ),
                             Text("Beds Availability",
                                 style: GoogleFonts.roboto(
                                     color: Colors.black,
-                                    fontSize: 90,
+                                    fontSize: 40,
                                     fontWeight: FontWeight.bold)),
                             Padding(
                               padding: const EdgeInsets.only(right: 90.0),
-                              child: Text('Tracking',
-                                  style: GoogleFonts.roboto(
-                                      color: Colors.black,
-                                      fontSize: 70,
-                                      fontWeight: FontWeight.bold)),
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Text('Tracking',
+                                    style: GoogleFonts.roboto(
+                                        color: Colors.black,
+                                        fontSize: 70,
+                                        fontWeight: FontWeight.bold)),
+                              ),
                             ),
                           ],
-                        ),
-                        Container(
-                          height: 400,
-                          child: VerticalDivider(
-                            color: Colors.black,
-                            thickness: 2,
-                          ),
                         ),
                         InkWell(
                           onTap: () {
@@ -1790,16 +1733,16 @@ class _mainContentState extends State<mainContent>
                                         color: Colors.white,
                                         borderRadius:
                                             BorderRadius.circular(15)),
-                                    width: 400,
-                                    height: 400,
+                                    width: 200,
+                                    height: 300,
                                   ),
                                   Positioned(
                                     //right: 20,
                                     top: 30,
                                     child: Image.asset(
                                       'Assets/images/beds.jpg',
-                                      width: 400,
-                                      height: 300,
+                                      width: 200,
+                                      height: 250,
                                     ),
                                   ),
                                 ],
@@ -1810,17 +1753,19 @@ class _mainContentState extends State<mainContent>
                       ],
                     ),
                     SizedBox(
-                      height: 80,
+                      height: 50,
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    Column(
                       children: [
-                        Text(
-                            'Head onto \nNavigation drawer\nfor more resources',
-                            style: GoogleFonts.roboto(
-                                color: Colors.black,
-                                fontSize: 60,
-                                fontWeight: FontWeight.bold)),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text(
+                              'Head onto \nNavigation\ndrawer\nfor more resources',
+                              style: GoogleFonts.roboto(
+                                  color: Colors.black,
+                                  fontSize: 40,
+                                  fontWeight: FontWeight.bold)),
+                        ),
                         MaterialButton(
                             color: Colors.black,
                             shape: RoundedRectangleBorder(
@@ -1831,12 +1776,15 @@ class _mainContentState extends State<mainContent>
                                   builder: (context) => drawer()));
                             },
                             height: 80,
-                            minWidth: 200,
+                            minWidth: 150,
                             child: Icon(
                               Icons.arrow_left,
-                              size: 50,
+                              size: 80,
                               color: Colors.white,
                             )),
+                        SizedBox(
+                          height: 20,
+                        )
                       ],
                     ),
                     Footer(
