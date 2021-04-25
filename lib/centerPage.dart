@@ -5,7 +5,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:route_transitions/route_transitions.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:footer/footer.dart';
+// import 'package:footer/footer.dart';
 
 // ignore: camel_case_types
 class mainScreen extends StatelessWidget {
@@ -1839,26 +1839,26 @@ class _mainContentState extends State<mainContent>
                             )),
                       ],
                     ),
-                    Footer(
-                        backgroundColor: Colors.yellow.shade400,
-                        child: Column(
-                          children: [
-                            Text(
-                              'Copyright ©2021, All Rights Reserved.',
-                              style: GoogleFonts.roboto(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 12.0,
-                                  color: Color(0xFF162A49)),
-                            ),
-                            Text(
-                              'Made with love by Ojas Gupta',
-                              style: GoogleFonts.roboto(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 12.0,
-                                  color: Color(0xFF162A49)),
-                            ),
-                          ],
-                        ))
+                    // Footer(
+                    //     backgroundColor: Colors.yellow.shade400,
+                    //     child: Column(
+                    //       children: [
+                    //         Text(
+                    //           'Copyright ©2021, All Rights Reserved.',
+                    //           style: GoogleFonts.roboto(
+                    //               fontWeight: FontWeight.bold,
+                    //               fontSize: 12.0,
+                    //               color: Color(0xFF162A49)),
+                    //         ),
+                    //         Text(
+                    //           'Made with love by Ojas Gupta',
+                    //           style: GoogleFonts.roboto(
+                    //               fontWeight: FontWeight.bold,
+                    //               fontSize: 12.0,
+                    //               color: Color(0xFF162A49)),
+                    //         ),
+                    //   ],
+                    // ))
                   ],
                 ),
               ),
