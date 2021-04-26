@@ -67,7 +67,7 @@ class _flexibleSpaceState extends State<flexibleSpace> {
                     animationDuration: 1200,
                     lineWidth: 15.0,
                     percent: 0.45,
-                    center: new Text(" 133+ million\ngiven one dose",
+                    center: new Text(" 139+ million\ngiven one dose",
                         style: new TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 20.0,
@@ -81,7 +81,7 @@ class _flexibleSpaceState extends State<flexibleSpace> {
                       animationDuration: 1200,
                       lineWidth: 15.0,
                       percent: 0.2,
-                      center: new Text(" 19.2+ million\nfully vaccinated",
+                      center: new Text(" 21.4+ million\nfully vaccinated",
                           style: new TextStyle(
                               fontWeight: FontWeight.bold,
                               fontSize: 20.0,
