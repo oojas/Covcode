@@ -351,104 +351,105 @@ class _mobileContentState extends State<mobileContent>
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Row(children: [
-                      SizedBox(
-                        width: 30,
-                      ),
-                      FadeTransition(
-                        opacity: _animation,
-                        child: InkWell(
-                          onTap: () {
-                            _launchURL();
-                          },
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Card(
-                              elevation: 15,
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(15)),
-                              child: Stack(
-                                children: [
-                                  Container(
-                                    decoration: BoxDecoration(
-                                        color: Colors.white,
-                                        borderRadius:
-                                            BorderRadius.circular(15)),
-                                    width: 150,
-                                    height: 250,
+                    Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          SizedBox(
+                            width: 2,
+                          ),
+                          FadeTransition(
+                            opacity: _animation,
+                            child: InkWell(
+                              onTap: () {
+                                _launchURL();
+                              },
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Card(
+                                  elevation: 15,
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(15)),
+                                  child: Stack(
+                                    children: [
+                                      Container(
+                                        decoration: BoxDecoration(
+                                            color: Colors.white,
+                                            borderRadius:
+                                                BorderRadius.circular(15)),
+                                        width: 150,
+                                        height: 250,
+                                      ),
+                                      Positioned(
+                                        left: 1,
+                                        top: 30,
+                                        child: Image.asset(
+                                          'Assets/images/JK.jpg',
+                                          width: 200,
+                                          height: 200,
+                                        ),
+                                      ),
+                                      Positioned(
+                                          bottom: 20,
+                                          left: 15,
+                                          child: Text("Jammu &\nKashmir",
+                                              style: GoogleFonts.roboto(
+                                                  color: Colors.black,
+                                                  fontSize: 20,
+                                                  fontWeight:
+                                                      FontWeight.bold))),
+                                    ],
                                   ),
-                                  Positioned(
-                                    left: 1,
-                                    top: 30,
-                                    child: Image.asset(
-                                      'Assets/images/JK.jpg',
-                                      width: 200,
-                                      height: 200,
-                                    ),
-                                  ),
-                                  Positioned(
-                                      bottom: 20,
-                                      left: 15,
-                                      child: Text("Jammu &\nKashmir",
-                                          style: GoogleFonts.roboto(
-                                              color: Colors.black,
-                                              fontSize: 20,
-                                              fontWeight: FontWeight.bold))),
-                                ],
+                                ),
                               ),
                             ),
                           ),
-                        ),
-                      ),
-                      SizedBox(
-                        width: 10,
-                      ),
-                      FadeTransition(
-                        opacity: _animation,
-                        child: InkWell(
-                          onTap: () {
-                            _launchURLDelhi();
-                          },
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Card(
-                              elevation: 15,
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(15)),
-                              child: Stack(
-                                children: [
-                                  Container(
-                                    decoration: BoxDecoration(
-                                        color: Colors.white,
-                                        borderRadius:
-                                            BorderRadius.circular(15)),
-                                    width: 150,
-                                    height: 250,
+                          FadeTransition(
+                            opacity: _animation,
+                            child: InkWell(
+                              onTap: () {
+                                _launchURLDelhi();
+                              },
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Card(
+                                  elevation: 15,
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(15)),
+                                  child: Stack(
+                                    children: [
+                                      Container(
+                                        decoration: BoxDecoration(
+                                            color: Colors.white,
+                                            borderRadius:
+                                                BorderRadius.circular(15)),
+                                        width: 150,
+                                        height: 250,
+                                      ),
+                                      Positioned(
+                                        left: 1,
+                                        top: 30,
+                                        child: Image.asset(
+                                          'Assets/images/delhi.jpg',
+                                          width: 200,
+                                          height: 200,
+                                        ),
+                                      ),
+                                      Positioned(
+                                          bottom: 40,
+                                          left: 25,
+                                          child: Text("Delhi",
+                                              style: GoogleFonts.roboto(
+                                                  color: Colors.black,
+                                                  fontSize: 20,
+                                                  fontWeight:
+                                                      FontWeight.bold))),
+                                    ],
                                   ),
-                                  Positioned(
-                                    left: 1,
-                                    top: 30,
-                                    child: Image.asset(
-                                      'Assets/images/delhi.jpg',
-                                      width: 200,
-                                      height: 200,
-                                    ),
-                                  ),
-                                  Positioned(
-                                      bottom: 40,
-                                      left: 25,
-                                      child: Text("Delhi",
-                                          style: GoogleFonts.roboto(
-                                              color: Colors.black,
-                                              fontSize: 20,
-                                              fontWeight: FontWeight.bold))),
-                                ],
+                                ),
                               ),
                             ),
                           ),
-                        ),
-                      ),
-                    ]),
+                        ]),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
