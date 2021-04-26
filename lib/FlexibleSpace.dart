@@ -140,10 +140,10 @@ class _MobileNavbarState extends State<MobileNavbar> {
                 child: CircularPercentIndicator(
                     radius: 120.0,
                     animation: true,
-                    animationDuration: 1200,
+                    animationDuration: 2000,
                     lineWidth: 15.0,
                     percent: 0.45,
-                    center: new Text(" 133+ million\ngiven one dose",
+                    center: new Text(" 139+ million\ngiven one dose",
                         style: new TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 13.0,
@@ -154,10 +154,10 @@ class _MobileNavbarState extends State<MobileNavbar> {
                   child: CircularPercentIndicator(
                       radius: 130.0,
                       animation: true,
-                      animationDuration: 1200,
+                      animationDuration: 2000,
                       lineWidth: 15.0,
-                      percent: 0.2,
-                      center: new Text(" 19.2+ million\nfully vaccinated",
+                      percent: 0.25,
+                      center: new Text(" 21.4+ million\nfully vaccinated",
                           style: new TextStyle(
                               fontWeight: FontWeight.bold,
                               fontSize: 13.0,
