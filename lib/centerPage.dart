@@ -54,7 +54,7 @@ class _mainContentState extends State<mainContent>
 
   _launchURLtelangana() async {
     const url =
-        'https://docs.google.com/spreadsheets/d/12VqdKMk0eSUo8oRA4RcwnE1G4QFd-CRsSH5GGXwAaEU/edit#gid=774993178';
+        'https://docs.google.com/document/d/13a2OSYCBpA1z5tj7V1Gw3BeQAXV_qFe6gvo0PZrweP0/mobilebasic';
     if (await canLaunch(url)) {
       await launch(url);
     } else {
@@ -138,8 +138,7 @@ class _mainContentState extends State<mainContent>
   }
 
   _launchURLGujarat() async {
-    const url =
-        'https://docs.google.com/spreadsheets/d/12VqdKMk0eSUo8oRA4RcwnE1G4QFd-CRsSH5GGXwAaEU/edit#gid=530480134';
+    const url = 'https://covid-resources-chi.vercel.app/gujarat';
     if (await canLaunch(url)) {
       await launch(url);
     } else {
@@ -149,7 +148,7 @@ class _mainContentState extends State<mainContent>
 
   _launchURLDehradun() async {
     const url =
-        'https://docs.google.com/spreadsheets/d/12VqdKMk0eSUo8oRA4RcwnE1G4QFd-CRsSH5GGXwAaEU/edit#gid=2071894277';
+        'https://docs.google.com/spreadsheets/d/19_KgVkDt-h_4PJUZtHr3GHo-GVum22429gvnEdjCbdI/edit#gid=1953562878';
     if (await canLaunch(url)) {
       await launch(url);
     } else {
@@ -158,8 +157,7 @@ class _mainContentState extends State<mainContent>
   }
 
   _launchURLUP() async {
-    const url =
-        'https://docs.google.com/spreadsheets/d/12VqdKMk0eSUo8oRA4RcwnE1G4QFd-CRsSH5GGXwAaEU/edit#gid=1982472810';
+    const url = 'https://covid-resources-chi.vercel.app/up';
     if (await canLaunch(url)) {
       await launch(url);
     } else {
@@ -169,7 +167,7 @@ class _mainContentState extends State<mainContent>
 
   _launchURLWestBengal() async {
     const url =
-        'https://docs.google.com/spreadsheets/d/12VqdKMk0eSUo8oRA4RcwnE1G4QFd-CRsSH5GGXwAaEU/edit#gid=679423925';
+        'https://docs.google.com/spreadsheets/d/1X7tqWu036hJYexlVUAOHv64eF5Nfn71XGtlYjMxP8lw/edit?fbclid=IwAR3Bv0qY2N5QN5XO04e0voaA8opUoPSVTWkYDmbK2p2k8aaBaHrPAHOVOfk#gid=1654953344';
     if (await canLaunch(url)) {
       await launch(url);
     } else {
@@ -179,7 +177,7 @@ class _mainContentState extends State<mainContent>
 
   _launchURLCH() async {
     const url =
-        'https://docs.google.com/spreadsheets/d/12VqdKMk0eSUo8oRA4RcwnE1G4QFd-CRsSH5GGXwAaEU/edit#gid=1576527948';
+        'https://docs.google.com/spreadsheets/d/1DvCXeTP2rZo5_2_TIt7_Zyi6ArEBkvwMGAIoFEe3Pi0/htmlview#';
     if (await canLaunch(url)) {
       await launch(url);
     } else {
@@ -188,8 +186,7 @@ class _mainContentState extends State<mainContent>
   }
 
   _launchURLMaharashtra() async {
-    const url =
-        'https://docs.google.com/spreadsheets/d/12VqdKMk0eSUo8oRA4RcwnE1G4QFd-CRsSH5GGXwAaEU/edit#gid=797770214';
+    const url = 'https://covid-resources-chi.vercel.app/maharashtra';
     if (await canLaunch(url)) {
       await launch(url);
     } else {
@@ -199,7 +196,7 @@ class _mainContentState extends State<mainContent>
 
   _launchURLKarnataka() async {
     const url =
-        'https://docs.google.com/spreadsheets/d/12VqdKMk0eSUo8oRA4RcwnE1G4QFd-CRsSH5GGXwAaEU/edit#gid=1188672555';
+        'https://script.google.com/macros/s/AKfycbyHGh-AisJVBuqfZ4pfSqu001AE6JetStqpLL2xg74m-Wgdd5Ogh6yGVKG6gYuqnn1D0g/exec';
     if (await canLaunch(url)) {
       await launch(url);
     } else {
@@ -217,8 +214,7 @@ class _mainContentState extends State<mainContent>
   }
 
   _launchURLHaryana() async {
-    const url =
-        'https://docs.google.com/spreadsheets/d/12VqdKMk0eSUo8oRA4RcwnE1G4QFd-CRsSH5GGXwAaEU/edit#gid=1482793484';
+    const url = 'https://covid-resources-chi.vercel.app/punjab';
     if (await canLaunch(url)) {
       await launch(url);
     } else {
@@ -227,8 +223,7 @@ class _mainContentState extends State<mainContent>
   }
 
   _launchURLAndhra() async {
-    const url =
-        'https://docs.google.com/spreadsheets/d/12VqdKMk0eSUo8oRA4RcwnE1G4QFd-CRsSH5GGXwAaEU/edit#gid=1639847916';
+    const url = 'https://linktr.ee/vjafightscovid';
     if (await canLaunch(url)) {
       await launch(url);
     } else {
@@ -284,7 +279,7 @@ class _mainContentState extends State<mainContent>
 
   _launchURLJharkhand() async {
     const url =
-        'https://docs.google.com/spreadsheets/d/12VqdKMk0eSUo8oRA4RcwnE1G4QFd-CRsSH5GGXwAaEU/edit#gid=1907477677';
+        'https://docs.google.com/spreadsheets/d/1AFQW2fHd-6b-FdqyXCsZjkYGDkj8jyj5P8E79KjJQwk/htmlview';
     if (await canLaunch(url)) {
       await launch(url);
     } else {
@@ -304,7 +299,7 @@ class _mainContentState extends State<mainContent>
 
   _launchURLRajasthan() async {
     const url =
-        'https://docs.google.com/spreadsheets/d/12VqdKMk0eSUo8oRA4RcwnE1G4QFd-CRsSH5GGXwAaEU/edit#gid=252549756';
+        'https://covidinfo.rajasthan.gov.in/covid19bedsstatusjaipur.aspx';
     if (await canLaunch(url)) {
       await launch(url);
     } else {
@@ -331,8 +326,7 @@ class _mainContentState extends State<mainContent>
   }
 
   _launchURLBangalore() async {
-    const url =
-        'https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vS-ipQLaCHZ8id4t4_NHf1FM4vQmBGQrGHAPFzNzJeuuGKsY_It6Tdb0Un_bC9gmig5G2dVxlXHoaEp/pubhtml?gid=1381543057&single=true';
+    const url = 'https://covid-resources-chi.vercel.app/bangalore';
     if (await canLaunch(url)) {
       await launch(url);
     } else {
@@ -341,8 +335,7 @@ class _mainContentState extends State<mainContent>
   }
 
   _launchURLMP() async {
-    const url =
-        'https://docs.google.com/spreadsheets/d/12VqdKMk0eSUo8oRA4RcwnE1G4QFd-CRsSH5GGXwAaEU/edit#gid=1588507253';
+    const url = 'https://covid-resources-chi.vercel.app/mp';
     if (await canLaunch(url)) {
       await launch(url);
     } else {
