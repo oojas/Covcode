@@ -66,8 +66,8 @@ class _flexibleSpaceState extends State<flexibleSpace> {
                     animation: true,
                     animationDuration: 1200,
                     lineWidth: 15.0,
-                    percent: 0.45,
-                    center: new Text(" 139+ million\ngiven one dose",
+                    percent: 0.47,
+                    center: new Text(" 143+ million\ngiven one dose",
                         style: new TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 20.0,
@@ -80,8 +80,8 @@ class _flexibleSpaceState extends State<flexibleSpace> {
                       animation: true,
                       animationDuration: 1200,
                       lineWidth: 15.0,
-                      percent: 0.2,
-                      center: new Text(" 21.4+ million\nfully vaccinated",
+                      percent: 0.25,
+                      center: new Text(" 22.6+ million\nfully vaccinated",
                           style: new TextStyle(
                               fontWeight: FontWeight.bold,
                               fontSize: 20.0,
@@ -143,7 +143,7 @@ class _MobileNavbarState extends State<MobileNavbar> {
                     animationDuration: 2000,
                     lineWidth: 15.0,
                     percent: 0.45,
-                    center: new Text(" 139+ million\ngiven one dose",
+                    center: new Text(" 143+ million\ngiven one dose",
                         style: new TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 13.0,
@@ -157,7 +157,7 @@ class _MobileNavbarState extends State<MobileNavbar> {
                       animationDuration: 2000,
                       lineWidth: 15.0,
                       percent: 0.25,
-                      center: new Text(" 21.4+ million\nfully vaccinated",
+                      center: new Text(" 22.6+ million\nfully vaccinated",
                           style: new TextStyle(
                               fontWeight: FontWeight.bold,
                               fontSize: 13.0,
