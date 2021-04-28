@@ -64,10 +64,10 @@ class _flexibleSpaceState extends State<flexibleSpace> {
                 child: CircularPercentIndicator(
                     radius: 200.0,
                     animation: true,
-                    animationDuration: 1200,
+                    animationDuration: 2000,
                     lineWidth: 15.0,
-                    percent: 0.47,
-                    center: new Text(" 143+ million\ngiven one dose",
+                    percent: 0.30,
+                    center: new Text(" 145+ million\ngiven one dose",
                         style: new TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 20.0,
@@ -78,10 +78,10 @@ class _flexibleSpaceState extends State<flexibleSpace> {
                   child: CircularPercentIndicator(
                       radius: 200.0,
                       animation: true,
-                      animationDuration: 1200,
+                      animationDuration: 2000,
                       lineWidth: 15.0,
-                      percent: 0.25,
-                      center: new Text(" 22.6+ million\nfully vaccinated",
+                      percent: 0.26,
+                      center: new Text(" 23.6+ million\nfully vaccinated",
                           style: new TextStyle(
                               fontWeight: FontWeight.bold,
                               fontSize: 20.0,
@@ -142,8 +142,8 @@ class _MobileNavbarState extends State<MobileNavbar> {
                     animation: true,
                     animationDuration: 2000,
                     lineWidth: 15.0,
-                    percent: 0.45,
-                    center: new Text(" 143+ million\ngiven one dose",
+                    percent: 0.30,
+                    center: new Text(" 145+ million\ngiven one dose",
                         style: new TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 13.0,
@@ -157,7 +157,7 @@ class _MobileNavbarState extends State<MobileNavbar> {
                       animationDuration: 2000,
                       lineWidth: 15.0,
                       percent: 0.25,
-                      center: new Text(" 22.6+ million\nfully vaccinated",
+                      center: new Text(" 23.6+ million\nfully vaccinated",
                           style: new TextStyle(
                               fontWeight: FontWeight.bold,
                               fontSize: 13.0,
