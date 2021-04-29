@@ -16,6 +16,15 @@ class drawer extends StatelessWidget {
     }
   }
 
+  _launchURLgetVaccinated() async {
+    const url = 'https://www.cowin.gov.in/home';
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
+
   _launchURLOther() async {
     const url =
         'https://drive.google.com/file/d/1nXPDNR0d2brKePtDHs9s4gXVXa7kYdtz/view';
@@ -97,6 +106,24 @@ class drawer extends StatelessWidget {
       child: SingleChildScrollView(
         child: Column(
           children: [
+            SizedBox(
+              height: 20,
+            ),
+            ListTile(
+              horizontalTitleGap: 20,
+              leading: Icon(
+                Icons.medical_services_outlined,
+                color: Colors.black,
+              ),
+              title: Text('Get Vaccinated',
+                  style: GoogleFonts.roboto(color: Colors.black, fontSize: 20)),
+              onTap: () {
+                _launchURLgetVaccinated();
+              },
+            ),
+            SizedBox(
+              height: 20,
+            ),
             ListTile(
               horizontalTitleGap: 20,
               leading: Icon(
