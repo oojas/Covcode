@@ -115,7 +115,7 @@ class drawer extends StatelessWidget {
                 Icons.medical_services_outlined,
                 color: Colors.black,
               ),
-              title: Text('Get Vaccinated',
+              title: Text('Register for Vaccination',
                   style: GoogleFonts.roboto(color: Colors.black, fontSize: 20)),
               onTap: () {
                 _launchURLgetVaccinated();
