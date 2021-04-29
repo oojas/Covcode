@@ -138,7 +138,7 @@ class _MobileNavbarState extends State<MobileNavbar> {
               Padding(
                 padding: const EdgeInsets.only(left: 200.0),
                 child: CircularPercentIndicator(
-                    radius: 120.0,
+                    radius: 130.0,
                     animation: true,
                     animationDuration: 2000,
                     lineWidth: 15.0,
@@ -148,6 +148,9 @@ class _MobileNavbarState extends State<MobileNavbar> {
                             fontWeight: FontWeight.bold,
                             fontSize: 13.0,
                             color: Colors.white))),
+              ),
+              SizedBox(
+                height: 10,
               ),
               Padding(
                   padding: const EdgeInsets.only(left: 200.0),

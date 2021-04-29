@@ -30,7 +30,7 @@ class _mainPageState extends State<mainPage> {
                       fontSize: 30)),
               centerTitle: true,
               pinned: true,
-              expandedHeight: 450,
+              expandedHeight: 480,
               flexibleSpace: FlexibleSpaceBar(
                 background: Navbar(),
               ),
