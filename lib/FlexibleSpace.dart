@@ -1,3 +1,4 @@
+import 'package:covidresources/data.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -66,8 +67,9 @@ class _flexibleSpaceState extends State<flexibleSpace> {
                     animation: true,
                     animationDuration: 2000,
                     lineWidth: 15.0,
-                    percent: 0.30,
-                    center: new Text(" 145+ million\ngiven one dose",
+                    percent: percent1,
+                    center: new Text(
+                        " $doseOfVaccination+ million\ngiven one dose",
                         style: new TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 20.0,
@@ -80,8 +82,9 @@ class _flexibleSpaceState extends State<flexibleSpace> {
                       animation: true,
                       animationDuration: 2000,
                       lineWidth: 15.0,
-                      percent: 0.26,
-                      center: new Text(" 23.6+ million\nfully vaccinated",
+                      percent: percent2,
+                      center: new Text(
+                          " $fullyVaccinated+ million\nfully vaccinated",
                           style: new TextStyle(
                               fontWeight: FontWeight.bold,
                               fontSize: 20.0,
@@ -142,8 +145,9 @@ class _MobileNavbarState extends State<MobileNavbar> {
                     animation: true,
                     animationDuration: 2000,
                     lineWidth: 15.0,
-                    percent: 0.30,
-                    center: new Text(" 145+ million\ngiven one dose",
+                    percent: percent1,
+                    center: new Text(
+                        " $doseOfVaccination+ million\ngiven one dose",
                         style: new TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 13.0,
@@ -159,8 +163,9 @@ class _MobileNavbarState extends State<MobileNavbar> {
                       animation: true,
                       animationDuration: 2000,
                       lineWidth: 15.0,
-                      percent: 0.25,
-                      center: new Text(" 23.6+ million\nfully vaccinated",
+                      percent: percent2,
+                      center: new Text(
+                          " $fullyVaccinated+ million\nfully vaccinated",
                           style: new TextStyle(
                               fontWeight: FontWeight.bold,
                               fontSize: 13.0,
