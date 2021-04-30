@@ -31,9 +31,11 @@ class flexibleSpace extends StatefulWidget {
 // ignore: camel_case_types
 class _flexibleSpaceState extends State<flexibleSpace> {
   @override
+  // ignore: override_on_non_overriding_member
   final double appBarHeight = 80.0;
 
   Widget build(BuildContext context) {
+    // ignore: non_constant_identifier_names
     final Width = MediaQuery.of(context).size.width;
     final double statusBarHeight = MediaQuery.of(context).padding.top;
     return Container(
@@ -105,6 +107,7 @@ class MobileNavbar extends StatefulWidget {
 class _MobileNavbarState extends State<MobileNavbar> {
   @override
   Widget build(BuildContext context) {
+    // ignore: non_constant_identifier_names
     final Width = MediaQuery.of(context).size.width;
     final double statusBarHeight = MediaQuery.of(context).padding.top;
     final double appBarHeight = 80.0;
