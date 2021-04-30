@@ -2,6 +2,7 @@ import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
+// ignore: camel_case_types
 class url {
   launchURLtelangana() async {
     const url =
@@ -155,7 +156,7 @@ class url {
   }
 
   launchURLDelhi() async {
-    const url = 'https://linktr.ee/_Help20';
+    const url = 'https://verifiedcovidleads.com/';
     if (await canLaunch(url)) {
       await launch(url);
     } else {
