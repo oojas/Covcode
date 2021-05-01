@@ -1510,6 +1510,13 @@ class _mobileContentState extends State<mobileContent>
                                   color: Color(0xFF162A49)),
                             ),
                             Text(
+                              'Dedicated to corona warriors',
+                              style: GoogleFonts.roboto(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 12.0,
+                                  color: Color(0xFF162A49)),
+                            ),
+                            Text(
                               'Made with love by Ojas Gupta',
                               style: GoogleFonts.roboto(
                                   fontWeight: FontWeight.bold,
