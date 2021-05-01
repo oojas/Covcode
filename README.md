@@ -1,6 +1,6 @@
 # This is the source code written to build the website
 
-(Deployed repo code)[https://github.com/oojas/Fight-Covid]
+[repo deployed](https://github.com/oojas/Fight-Covid)
 
 # TRIBUTE TO CORONA WARRIORS
 
