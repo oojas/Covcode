@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:route_transitions/route_transitions.dart';
-import 'package:url_launcher/url_launcher.dart';
+
 import 'package:footer/footer.dart';
 
 // ignore: camel_case_types

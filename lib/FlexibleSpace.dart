@@ -70,8 +70,7 @@ class _flexibleSpaceState extends State<flexibleSpace> {
                     animationDuration: 2000,
                     lineWidth: 15.0,
                     percent: percent1,
-                    center: new Text(
-                        " $doseOfVaccination+ million\ngiven one dose",
+                    center: new Text(" $doseOfVaccination+ Cr\ngiven one dose",
                         style: new TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 20.0,
@@ -86,7 +85,7 @@ class _flexibleSpaceState extends State<flexibleSpace> {
                       lineWidth: 15.0,
                       percent: percent2,
                       center: new Text(
-                          " $fullyVaccinated+ million\nfully vaccinated",
+                          " $fullyVaccinated+ Cr\nfully vaccinated",
                           style: new TextStyle(
                               fontWeight: FontWeight.bold,
                               fontSize: 20.0,
@@ -149,8 +148,7 @@ class _MobileNavbarState extends State<MobileNavbar> {
                     animationDuration: 2000,
                     lineWidth: 15.0,
                     percent: percent1,
-                    center: new Text(
-                        " $doseOfVaccination+ million\ngiven one dose",
+                    center: new Text(" $doseOfVaccination+ Cr\ngiven one dose",
                         style: new TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 13.0,
@@ -168,7 +166,7 @@ class _MobileNavbarState extends State<MobileNavbar> {
                       lineWidth: 15.0,
                       percent: percent2,
                       center: new Text(
-                          " $fullyVaccinated+ million\nfully vaccinated",
+                          " $fullyVaccinated+ Cr\nfully vaccinated",
                           style: new TextStyle(
                               fontWeight: FontWeight.bold,
                               fontSize: 13.0,

@@ -89,7 +89,8 @@ class url {
   }
 
   launchURLGujarat() async {
-    const url = 'https://covid-resources-chi.vercel.app/gujarat';
+    const url =
+        'https://www.instagram.com/stvorg/guide/gujarat-covid-19-resources/17887002398146172/?utm_source=ig_web_copy_link&utm_campaign=&utm_medium=';
     if (await canLaunch(url)) {
       await launch(url);
     } else {
@@ -98,8 +99,7 @@ class url {
   }
 
   launchURLDehradun() async {
-    const url =
-        'https://docs.google.com/spreadsheets/d/19_KgVkDt-h_4PJUZtHr3GHo-GVum22429gvnEdjCbdI/edit#gid=1953562878';
+    const url = 'https://bing.com/covid/local/dehradun_uttarakhand_india';
     if (await canLaunch(url)) {
       await launch(url);
     } else {
@@ -108,7 +108,8 @@ class url {
   }
 
   launchURLUP() async {
-    const url = 'https://covid-resources-chi.vercel.app/up';
+    const url =
+        'https://drive.google.com/file/d/1wI3dz1bvevT1ncLahizYq1A-QbF70OZu/view';
     if (await canLaunch(url)) {
       await launch(url);
     } else {
@@ -137,7 +138,8 @@ class url {
   }
 
   launchURLMaharashtra() async {
-    const url = 'https://covid-resources-chi.vercel.app/maharashtra';
+    const url =
+        'https://www.mumbailive.com/en/covid-19/mumbai-maharashtra-resources-and-information-lockdown-vaccines-protocols';
     if (await canLaunch(url)) {
       await launch(url);
     } else {
@@ -156,7 +158,7 @@ class url {
   }
 
   launchURLDelhi() async {
-    const url = 'https://verifiedcovidleads.com/';
+    const url = 'http://corona.delhi.gov.in/';
     if (await canLaunch(url)) {
       await launch(url);
     } else {
@@ -165,7 +167,7 @@ class url {
   }
 
   launchURLHaryana() async {
-    const url = 'https://covid-resources-chi.vercel.app/punjab';
+    const url = 'http://nhmharyana.gov.in/page?id=208';
     if (await canLaunch(url)) {
       await launch(url);
     } else {
@@ -277,7 +279,8 @@ class url {
   }
 
   launchURLBangalore() async {
-    const url = 'https://covid-resources-chi.vercel.app/bangalore';
+    const url =
+        'https://www.thenewsminute.com/article/bengaluru-covid-19-labs-beds-ambulances-list-numbers-you-may-need-147443';
     if (await canLaunch(url)) {
       await launch(url);
     } else {
@@ -286,7 +289,7 @@ class url {
   }
 
   launchURLMP() async {
-    const url = 'https://covid-resources-chi.vercel.app/mp';
+    const url = 'https://covidmp.com/';
     if (await canLaunch(url)) {
       await launch(url);
     } else {
