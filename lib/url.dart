@@ -80,7 +80,7 @@ class url {
   }
 
   launchURL() async {
-    const url = 'https://covid-resources-chi.vercel.app/jk';
+    const url = 'https://covid-resources-chi.vercel.app/state/jk';
     if (await canLaunch(url)) {
       await launch(url);
     } else {
