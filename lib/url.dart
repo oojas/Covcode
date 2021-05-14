@@ -213,7 +213,8 @@ class url {
   }
 
   launchURLChandigarh() async {
-    const url = 'https://linktr.ee/Plasmadonorschandigarh';
+    const url =
+        'https://twitter.com/search?q=chandigarh%20covid%20resources&src=typed_query';
     if (await canLaunch(url)) {
       await launch(url);
     } else {
