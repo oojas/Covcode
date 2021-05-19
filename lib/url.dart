@@ -213,8 +213,7 @@ class url {
   }
 
   launchURLChandigarh() async {
-    const url =
-        'https://twitter.com/search?q=chandigarh%20covid%20resources&src=typed_query';
+    const url = 'http://chdcovid19.in/index.php/page/useful-resources';
     if (await canLaunch(url)) {
       await launch(url);
     } else {
