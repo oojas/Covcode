@@ -1,4 +1,4 @@
-var doseOfVaccination = 17.6;
-var fullyVaccinated = 3.82;
+var doseOfVaccination = 18.5;
+var fullyVaccinated = 4.09;
 var percent1 = 0.32;
 var percent2 = 0.27;
