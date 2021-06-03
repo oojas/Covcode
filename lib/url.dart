@@ -80,7 +80,8 @@ class url {
   }
 
   launchURL() async {
-    const url = 'https://covid-resources-chi.vercel.app/state/jk';
+    const url =
+        'https://www.instagram.com/stvorg/guide/jammu-kashmir-covid-19-resources/17869596071491332/?igshid=11qck5wfsa7b7';
     if (await canLaunch(url)) {
       await launch(url);
     } else {
